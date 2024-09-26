@@ -1,16 +1,19 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import '../styles/Navbar.css'; // Import the CSS file
 
 const Navbar = () => {
-    return (
-        <nav style={{ padding: '1rem', background: '#333', color: '#fff' }}>
-            <Link to="/" style={{ margin: '0 1rem', color: '#fff' }}>Home</Link>
-            <Link to="/about" style={{ margin: '0 1rem', color: '#fff' }}>About</Link>
-            <Link to="/profile" style={{ margin: '0 1rem', color: '#fff' }}>Profile</Link>
-            <Link to="/matches" style={{ margin: '0 1rem', color: '#fff' }}>Matches</Link>
-            <Link to="/contact" style={{ margin: '0 1rem', color: '#fff' }}>Contact</Link>
-        </nav>
-    );
+  return (
+    <nav className="navbar">
+      <div className="navbar-logo">Matchmaking App</div>
+      <ul className="navbar-links">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/profile">Profile</a></li>
+        <li><a href="/matches">Matches</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  );
 };
 
 export default Navbar;

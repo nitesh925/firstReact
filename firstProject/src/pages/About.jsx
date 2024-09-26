@@ -1,64 +1,23 @@
 import React from 'react';
-import '../styles/App.css';  // Assuming your styles are in the /styles folder
-import SearchIcon from '@mui/icons-material/Search';
-import { styled, alpha } from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-
-
-// Define the styled components for the search bar
-const Search = styled('div')(({ theme }) => ({
-  position: 'relative',
-  borderRadius: theme.shape.borderRadius,
-  backgroundColor: alpha(theme.palette.common.white, 0.15),
-  '&:hover': {
-    backgroundColor: alpha(theme.palette.common.white, 0.25),
-  },
-  marginLeft: 0,
-  width: '100%',
-  [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(1),
-    width: 'auto',
-  },
-}));
-
-const SearchIconWrapper = styled('div')(({ theme }) => ({
-  padding: theme.spacing(0, 2),
-  height: '100%',
-  position: 'absolute',
-  pointerEvents: 'none',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
-const StyledInputBase = styled(InputBase)(({ theme }) => ({
-  color: 'inherit',
-  width: '100%',
-  '& .MuiInputBase-input': {
-    padding: theme.spacing(1, 1, 1, 0),
-    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-    transition: theme.transitions.create('width'),
-    [theme.breakpoints.up('sm')]: {
-      width: '12ch',
-      '&:focus': {
-        width: '20ch',
-      },
-    },
-  },
-}));
+import '../styles/About.css'; // Import the About page CSS
 
 const About = () => {
   return (
     <div className="about-container">
-      <Search>
-        <SearchIconWrapper>
-          <SearchIcon />
-        </SearchIconWrapper>
-        <StyledInputBase
-          placeholder="Search…"
-          inputProps={{ 'aria-label': 'search' }}
-        />
-      </Search>
+      <h1 className="about-heading">About Our Developer Matchmaking App</h1>
+      <p className="about-description">
+        Our matchmaking app is designed specifically for developers, helping them find collaborators, mentors, and project partners based on their skills and interests. Whether you're into front-end, back-end, AI, or any other tech field, we connect you with like-minded individuals to build amazing projects together.
+      </p>
+      <h2 className="about-subheading">How It Works</h2>
+      <ul className="about-list">
+        <li>Sign up and create a profile highlighting your skills and interests.</li>
+        <li>Explore potential matches based on similar skills, programming languages, or projects.</li>
+        <li>Collaborate with developers on open-source projects or new ideas.</li>
+      </ul>
+      <h2 className="about-subheading">Why Use Our App?</h2>
+      <p className="about-description">
+        In today's tech world, collaboration is key. Whether you're a student, a freelancer, or a seasoned developer, finding the right people to work with can unlock new opportunities, improve your skills, and bring your ideas to life. Our platform is a hub for developers to connect and grow together.
+      </p>
     </div>
   );
 };
