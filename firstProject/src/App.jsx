@@ -1,22 +1,27 @@
-import { useState } from "react";
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Profile from './pages/Profile';
+import Matches from './pages/Matches';
+import Contact from './pages/Contact';
 
-const App=()=>{
-  
-const [count, setCount]= useState(0);
-  const add=()=>{
-    setCount(count+1);
-  }
-  const sub=()=>{
-    setCount(count-1);
-  }
-    return(
-      
-        <>
-            <h1>{count}</h1>
-            <button onClick={add}>Add</button>
-            
-            <button onClick={sub}>Sub</button>
-        </>
-    )
-}
+const App = () => {
+    return (
+        <div>
+            <Navbar />
+            <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/about" element={<About />} />
+                <Route path="/profile" element={<Profile />} />
+                <Route path="/matches" element={<Matches />} />
+                <Route path="/contact" element={<Contact />} />
+            </Routes>
+            <Footer />
+        </div>
+    );
+};
+
 export default App;
