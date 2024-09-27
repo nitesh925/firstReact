@@ -32,9 +32,11 @@ const Home = () => {
     setFilteredSkills(filtered);
   };
 
-  // Generate 9 cards based on the skills array
+  // Render skills cards based on search input
   const renderCards = () => {
-    return skills.map((skill) => (
+    const skillsToRender = searchQuery ? filteredSkills : skills; // Use filtered or all skills
+
+    return skillsToRender.map((skill) => (
       <div key={skill.id} className="card">
         <h3>{skill.name}</h3>
       </div>
@@ -42,39 +44,37 @@ const Home = () => {
   };
 
   return (
-    <>
-      <div className="home-container">
-        <h1 className="home-heading">Find the right match, right away...</h1>
-        <div className="search-container">
-          <div className="search-icon-wrapper">
-            <SearchIcon />
-          </div>
-          <input
-            type="text"
-            className="search-input"
-            placeholder="Search…"
-            aria-label="search"
-            value={searchQuery}
-            onChange={handleInputChange}
-          />
+    <div className="home-container">
+      <h1 className="home-heading">Find the right match, right away...</h1>
+      <div className="search-container">
+        <div className="search-icon-wrapper">
+          <SearchIcon />
         </div>
-
-        {/* Render filtered suggestions below the search input */}
-        {searchQuery && filteredSkills.length > 0 && (
-          <div className="suggestions-container">
-            {filteredSkills.map(skill => (
-              <div key={skill.id} className="suggestion-item">
-                {skill.name}
-              </div>
-            ))}
-          </div>
-        )}
+        <input
+          type="text"
+          className="search-input"
+          placeholder="Search…"
+          aria-label="search"
+          value={searchQuery}
+          onChange={handleInputChange}
+        />
       </div>
+
+      {/* Render filtered suggestions below the search input */}
+      {searchQuery && filteredSkills.length > 0 && (
+        <div className="suggestions-container">
+          {filteredSkills.map(skill => (
+            <div key={skill.id} className="suggestion-item">
+              {skill.name}
+            </div>
+          ))}
+        </div>
+      )}
 
       <div className="cards-container">
         {renderCards()}
       </div>
-    </>
+    </div>
   );
 };
 
