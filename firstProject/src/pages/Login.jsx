@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { auth } from '../firebaseConfig';
 import { signInWithEmailAndPassword } from 'firebase/auth';
+import "../styles/Login.css"; // Ensure you import the CSS file
 
 const Login = () => {
     const [email, setEmail] = useState('');
@@ -13,7 +14,7 @@ const Login = () => {
         if (auth.currentUser) {
             navigate('/');
         }
-    }, []);
+    }, [navigate]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
