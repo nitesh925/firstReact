@@ -1,0 +1,93 @@
+.matches-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+    text-align: center;
+}
+
+.skills-list,
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.skill-card,
+.interest-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    flex: 1 1 200px; /* Adjusts the size of the cards */
+    transition: transform 0.3s;
+}
+
+.skill-card:hover,
+.interest-card:hover {
+    transform: scale(1.05);
+}
+.users-list {
+    margin-top: 20px; /* Space above the user list */
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between grid items */
+}
+
+.user-item {
+    background-color: #f9f9f9; /* Light background for each user */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the user card */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left for readability */
+}
+
+/* Optional: To make the layout responsive */
+@media (max-width: 900px) {
+    .users-list {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 600px) {
+    .users-list {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+.skill-item, .interest-item {
+    background-color: #e8e8e8; /* Background for items */
+    padding: 8px; /* Padding inside items */
+    border-radius: 4px; /* Rounded corners for items */
+    margin: 5px 0; /* Space between items */
+}
+.user-item {
+    background-color: #f9f9f9; /* Light background for each user */
+    border-radius: 8px; /* Rounded corners */
+    padding: 15px; /* Padding inside the user card */
+    margin: 10px 0; /* Margin between user cards */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left for readability */
+}
+.user-buttons {
+    margin-top: 10px; /* Space above the buttons */
+    display: flex; /* Use flexbox to align buttons */
+    justify-content: center; /* Center buttons */
+}
+
+.user-buttons button {
+    background-color: #333; /* Button background color */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px 15px; /* Padding inside buttons */
+    margin: 0 5px; /* Space between buttons */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.user-buttons button:hover {
+    background-color: #717171; /* Darker shade on hover */
+}

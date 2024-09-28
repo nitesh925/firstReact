@@ -44,6 +44,7 @@ const Home = () => {
   };
 
   return (
+    <>
     <div className="home-container">
       <h1 className="home-heading">Find the right match, right away...</h1>
       <div className="search-container">
@@ -75,6 +76,50 @@ const Home = () => {
         {renderCards()}
       </div>
     </div>
+    <div className="home-container2">
+    <h1 className="home-heading2">Find Your Perfect Project Partner</h1>
+    <p className="home-subheading">Connect with developers who share your skills and interests.</p>
+
+    <div className="home-section">
+      <h2>Collaborate in Over 500 Categories</h2>
+      <p>
+        Whether you're into web development, machine learning, or app design, find like-minded individuals to team up and work on exciting projects.
+      </p>
+    </div>
+
+    <div className="home-section">
+      <h2>Tailored Skill Matching</h2>
+      <p>
+        Our advanced algorithm matches you with developers who share your specific expertise and passions, ensuring seamless collaboration for every task.
+      </p>
+    </div>
+
+    <div className="home-section">
+      <h2>Flexible and Transparent Collaboration</h2>
+      <p>
+        Choose to collaborate on open-source projects, side hustles, or personal goals. Set clear expectations, and work together at your own pace.
+      </p>
+    </div>
+
+    <div className="home-section">
+      <h2>Faster Results with High-Quality Partners</h2>
+      <p>
+        Quickly find the right partners through advanced filtering based on skills, experience, and interests, and get projects moving faster than ever.
+      </p>
+    </div>
+
+    <div className="home-section">
+      <h2>24/7 Support and Guidance</h2>
+      <p>
+        Whether you need help finding collaborators or guidance on your project, our dedicated support team is available around the clock to assist you.
+      </p>
+    </div>
+
+    
+
+    
+  </div>
+  </>
   );
 };
 

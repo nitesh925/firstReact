@@ -1,7 +1,7 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./authContext"; // Adjust path if needed
-
+import './styles/App.css'
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
@@ -14,6 +14,7 @@ import Register from "./pages/Register";
 
 const App = () => {
   return (
+    <div className="app-container">
     <AuthProvider>
       <Navbar />
       <Routes>
@@ -27,6 +28,7 @@ const App = () => {
       </Routes>
       <Footer />
     </AuthProvider>
+    </div>
   );
 };
 
