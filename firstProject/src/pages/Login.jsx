@@ -23,8 +23,18 @@ const Login = () => {
             alert("Logged in successfully!");
             navigate('/'); // Redirect to home after successful login
         } catch (error) {
-            alert(error.message);
+            if (error.code === 'auth/user-not-found') {
+                // If user not found, redirect to register page
+                alert("User not found! Redirecting to register page.");
+                navigate('/register'); // Change this path to your register route
+            } else {
+                alert(error.message);
+            }
         }
+    };
+
+    const handleRegister = () => {
+        navigate('/register'); // Redirect to register page
     };
 
     return (
@@ -47,6 +57,12 @@ const Login = () => {
                 />
                 <button type="submit">Login</button>
             </form>
+            <div className='register-cont'>
+            <h4>New User ? </h4>
+            <button className="register-button" onClick={handleRegister}>
+                Register
+            </button>
+            </div>
         </div>
     );
 };

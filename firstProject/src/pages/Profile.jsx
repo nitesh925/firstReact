@@ -3,7 +3,7 @@
 import React from 'react';
 import { useAuth } from '../authContext'; // Adjust the path as needed
 import SkillsForm from '../components/SkillsForm'; // Adjust the path as needed
-
+import '../styles/Profile.css';
 const Profile = () => {
     const { currentUser } = useAuth();
 

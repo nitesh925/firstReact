@@ -51,3 +51,23 @@ button {
 button:hover {
     background-color: #555; /* Darker color on hover */
 }
+.register-button {
+    margin-top: 10px; /* Adds some space above the button */
+    padding: 10px; /* Adds padding for better appearance */
+    background-color: #333; /* Green background */
+    width: 200px;
+    height: 40px;
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Changes cursor on hover */
+}
+
+.register-button:hover {
+    background-color: #b8b8b8; /* Darker green on hover */
+}
+.register-cont{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 150px;
+}
