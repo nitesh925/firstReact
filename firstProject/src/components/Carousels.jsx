@@ -18,7 +18,7 @@ const Carousel = () => {
                 <h3>Welcome to the Developer Matchmaking App</h3>
             </div>
             <div>
-                <h3>Find your perfect match!</h3>
+                <h3>Your Event, Your Way</h3>
             </div>
         </Slider>
     );

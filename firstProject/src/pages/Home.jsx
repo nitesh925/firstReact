@@ -46,7 +46,7 @@ const Home = () => {
   return (
     <>
     <div className="home-container">
-      <h1 className="home-heading">Find the right match, right away...</h1>
+      <h1 className="home-heading">Your Event, Your Way!!!</h1>
       <div className="search-container">
         <div className="search-icon-wrapper">
           <SearchIcon />
