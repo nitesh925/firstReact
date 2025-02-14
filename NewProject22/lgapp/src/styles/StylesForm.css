@@ -1,0 +1,106 @@
+.form-container {
+  
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff; /* Change to white for a cleaner look */
+}
+
+h2 {
+  text-align: center;
+  font-size: 2rem; /* Increase font size for headings */
+  color: #333; /* Darker color for better contrast */
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Consistent font */
+}
+
+label {
+  display: block;
+  margin-bottom: 8px; /* Reduce margin for a tighter layout */
+  font-weight: bold; /* Make label text bold */
+  color: #555; /* Slightly darker for better readability */
+}
+
+input, select {
+  width: 100%;
+  padding: 12px; /* Increased padding for better touch target */
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px; /* More rounded corners */
+  transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+input:focus, select:focus {
+  border-color: #333; /* Highlight input border on focus */
+  outline: none; /* Remove default outline */
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #333; /* Primary button color */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Match the button corners */
+  font-size: 1rem; /* Consistent font size */
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #717171; /* Darker shade on hover */
+}
+
+.skills-interests-container {
+  display: flex;
+  justify-content: center; /* Center the entire container */
+  margin-top: 20px; /* Space above the container */
+}
+
+.skills-list, .interests-list {
+  flex: 1; /* Allow equal width for both columns */
+  padding: 10px; /* Padding inside each column */
+  max-width: 200px; /* Set a maximum width for better layout */
+}
+.matches-container {
+  display: flex;
+  justify-content: center; /* Center the container */
+  align-items: center; /* Center items vertically */
+  min-height: 100vh; /* Full height of the viewport */
+  background-color: #f5f5f5; /* Light background color */
+}
+
+.user-card {
+  background-color: #ffffff; /* Card background color */
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+  padding: 30px; /* Padding inside the card */
+  max-width: 600px; /* Max width for the card */
+  width: 100%; /* Full width on smaller screens */
+  text-align: center; /* Center text alignment */
+}
+
+.skills-interests {
+  display: flex; /* Flexbox layout for skills and interests */
+  justify-content: space-between; /* Space between skills and interests */
+  margin-top: 20px; /* Space above the section */
+}
+
+.skills, .interests {
+  flex: 1; /* Equal space for both columns */
+  margin: 0 10px; /* Margins between columns */
+}
+
+.skill-item, .interest-item {
+  background-color: #e8e8e8; /* Background for items */
+  padding: 10px; /* Padding inside items */
+  border-radius: 8px; /* Rounded corners for items */
+  margin: 5px 0; /* Space between items */
+}
+
+h1, h2, h3 {
+  color: #333; /* Darker color for better contrast */
+}
+
